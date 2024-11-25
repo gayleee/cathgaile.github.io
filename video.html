@@ -11,55 +11,114 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            background-color: #0d0d0d;
+            font-family: "Bebas Neue", "sans-serif";
+            overflow-x: hidden;
+        }
+        p{
+            font-family: "Montserrat", "sans-serif";
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
         .btn{
-            background-color: #160D37;
+            background-color: #BDB5E3;
             transition: ease-in-out 0.3s;
         }
         .btn:hover{
-            background-color: #644dff;
+            background-color: #7862E8;
         }
         .card{
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            background-color: #1a1a1a;
+        }
+        .vidThumbnail{
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (max-width: 575px){
+            #videoContainer{
+                text-align: center;
+            }
+            .box{
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col my-4">
-                <div class="card p-3 text-center" style="width: 5rem;">
-                    <a href="index.html">
-                        <i class="bi bi-arrow-left" style="color: #160D37; font-size: 24px;"></i>
-                    </a>
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto my-5">
+                    <div class="artbox">
+                        <img src="https://i.imgur.com/IHNYJy1.png" class="img-fluid" alt="videoBanner">
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto my-5">
+                    <div class="box">
+                        <h5 style="color: #BDB5E3;">Video Highlights</h5>
+                        <h3 class="text-light">Frames in Motion</h3>
+                        <p class="text-secondary">
+                            Glad to see you here! This page is dedicated to things I do mostly for the love and 
+                            fun of it. Feel free to explore and check out what I've shared here—it's not much, 
+                            but it's both fun and genuine work!
+                        </p>
+                        <a class="btn px-5 py-2 rounded-1" href="index.html" type="button" style="color: #0d0d0d;" id="aboutMe">
+                            Go back to home
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row" id="cardContainer">
-        </div>
-    </div>
-    <script>
-        var outputName = ["SAM A02", "SAM A04"]
-        var output = ["A02/index.html", "A04/index.html"];
-        var outputDesc = ["This site uses Bootstrap 5.3", "This site also uses Bootstrap 5.3"]
+    </section>
 
-        for(var i = 0; i < output.length; i++){
-            var container = document.getElementById("cardContainer");
-            container.innerHTML += `<div class="col-lg-12 my-3">
-                <div class="card p-2">
-                    <div class="row d-flex w-100 mx-auto my-2 align-items-center">
-                        <div class="col-lg-6">
-                            <h5 class="card-title ms-3"><strong> `+outputName[i]+` </strong></h5>
-                            <p class="card-text text-secondary ms-3"> `+outputDesc[i]+` </p>
-                        </div>
-                        <div class="col-lg-6 d-flex justify-content-end">
-                            <a href="`+output[i]+`" class="icon-link btn py-2 px-3 my-3 text-light" target="_blank">
-                                <strong>Explore this work</strong>
-                                <i class="bi bi-arrow-right px-2 pb-4"></i>
-                            </a>
-                        </div>
+    <section id="videos">
+        <div class="container">
+            <div class="row" id="videoContainer">
+                <h3 class="px-3 mt-5" style="color: #BDB5E3;">Recent Videos</h3>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var videoCategory = [
+            "Game Highlights",
+            "Game Highlights",
+            "Art Highlights"
+        ]
+        var videoTitle = [
+            "Leo Tekken 8 Rank Highlights",
+            "Reina Tekken 8 Rank Highlights",
+            "Art Banner Speed Paint"
+        ];
+        var video = [
+            "https://www.youtube-nocookie.com/embed/CC0lLRZeuJc?si=A4w1w1TWwQJF-AWj&rel=0&controls=0",
+            "https://www.youtube-nocookie.com/embed/3qG6o1LLs8c?si=1LzymtzSK1dRXFAT&rel=0&controls=0",
+            "https://www.youtube-nocookie.com/embed/k33mjD_goPA?si=8DcH33du4ulX4wG3&rel=0&controls=0"
+        ]
+        var videoDesc = [
+            "Here are a few games with my main. A match usually take about 2-4 minutes to complete, but the longest wait is usually during matchmaking.", 
+            "Here's another one with my secondary. I only play her and the other one I featured since I tend to choose based on a character's visuals, and in this case, both designs appeal to me.",
+            "I painted the same two characters. This is an older piece I created for fun and decided to continue, taking an entire day to complete. It showcases the full process before any edits were made."
+        ]
+
+        for(var i = 0; i < video.length; i++){
+            var container = document.getElementById("videoContainer");
+            container.innerHTML += `
+                <div class="col-lg-4 my-2">
+                    <div class="vidThumbnail ratio ratio-16x9 mx-auto my-3">
+                        <iframe width="560" height="315" src="`+ video[i] +`" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                </div>
-            </div>`
+                    <h5 style="color: #BDB5E3;">`+ videoCategory[i] +`</h5>
+                    <h3 class="text-light">`+ videoTitle[i] +`</h3>
+                    <p class="text-secondary">`+ videoDesc[i] +`</p>
+                </div>`
         }
     </script>
 </body>
