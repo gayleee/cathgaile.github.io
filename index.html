@@ -206,25 +206,25 @@
             "https://i.imgur.com/07jmhaO.png"
         ]
 
-        for(var i = 0; i < output < output.length; i++){
+        for(var i = 0; i < output.length; i++){
             var container = document.getElementById("projectsContainer");
             container.innerHTML += `
-            <div class="col-lg-3 my-2">
-                <div class="thumbnailBox mx-auto px-3 py-1">
-                    <a href="`+ output[i] +`">
-                        <div class="thumbnailContainer my-3">
-                            <div class="thumbnailGradient"></div>
-                            <img src="`+ outputThumbnail[i] +`" class="thumbnail img-fluid" alt="activityThumbnail">
-                            <div class="card-img-overlay text-light text-center d-flex justify-content-center align-items-center">
-                                <p>Learn more</p>
+                <div class="col-lg-3 my-2">
+                    <div class="thumbnailBox mx-auto px-3 py-1">
+                        <a href="`+ output[i] +`">
+                            <div class="thumbnailContainer my-3">
+                                <div class="thumbnailGradient"></div>
+                                <img src="`+ outputThumbnail[i] +`" class="thumbnail img-fluid" alt="activityThumbnail">
+                                <div class="card-img-overlay text-light text-center d-flex justify-content-center align-items-center">
+                                    <p>Learn more</p>
+                                </div>
                             </div>
-                        </div>
-                    </a> 
-                    <h5 style="color: #BDB5E3;">`+ outputNumber[i] +`</h5>
-                    <h3 class="text-light">`+ outputName[i] +`</h3>
-                    <p class="text-secondary">`+ outputDesc[i] +`</p>
-                </div>
-            </div>`
+                        </a> 
+                        <h5 style="color: #BDB5E3;">`+ outputNumber[i] +`</h5>
+                        <h3 class="text-light">`+ outputName[i] +`</h3>
+                        <p class="text-secondary">`+ outputDesc[i] +`</p>
+                    </div>
+                </div>`
         };
         var cardIcon = [
             "https://i.imgur.com/UdNvyZG.png",
@@ -254,16 +254,16 @@
         for(var j = 0; j < cardTitle.length; j++){
             var cardContainer = document.getElementById("cardContainer");
             cardContainer.innerHTML += `
-            <div col-lg-3 col-md-6 my-4>
-                <div class="card rounded-0 mx-auto">
-                    <div class="card-body d-flex flex-column justify-content-end my-3">
-                        <img src="`+ cardIcon[j] +`" class="icon img-fluid" style="height: 48px; width: 48px;" alt="cardIcon">
-                        <h5 style="color: #BDB5E3;">`+ cardCategory[i] +`</h5>
-                        <h3 class="text-light">`+ cardTitle[i] +`</h3>
-                        <p class="text-secondary">`+ cardDesc[i] +`</p>
+                <div class="col-lg-3 col-md-6 my-4">
+                    <div class="card rounded-0 mx-auto">
+                        <div class="card-body d-flex flex-column justify-content-end my-3">
+                            <img src="`+ cardIcon[j] +`" class="icon img-fluid" style="height: 48px; width: 48px;" alt="cardIcon">
+                            <h5 style="color: #BDB5E3;">`+ cardCategory[i] +`</h5>
+                            <h3 class="text-light">`+ cardTitle[i] +`</h3>
+                            <p class="text-secondary">`+ cardDesc[i] +`</p>
+                        </div>
                     </div>
-                </div>
-            </div>`
+                </div>`
         }
     </script>
 </body>
