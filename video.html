@@ -11,10 +11,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        body{
+        html, body{
             background-color: #0d0d0d;
             font-family: "Bebas Neue", "sans-serif";
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
         p{
             font-family: "Montserrat", "sans-serif";
@@ -30,9 +32,6 @@
         .btn:hover{
             background-color: #7862E8;
         }
-        .card{
-            background-color: #1a1a1a;
-        }
         .vidThumbnail{
             width: 100%;
             height: auto;
@@ -46,6 +45,10 @@
             .box{
                 text-align: center;
             }
+            a, .btn{
+                font-size: 0.5rem;
+                padding: 0.5rem 0.5rem;
+            }
         }
     </style>
 </head>
@@ -58,7 +61,7 @@
                         <img src="https://i.imgur.com/IHNYJy1.png" class="img-fluid" alt="videoBanner">
                     </div>
                 </div>
-                <div class="col-lg-6 mx-auto my-5">
+                <div class="col-lg-6 my-5">
                     <div class="box">
                         <h5 style="color: #BDB5E3;">Video Highlights</h5>
                         <h3 class="text-light">Frames in Motion</h3>
