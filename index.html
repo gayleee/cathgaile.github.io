@@ -108,6 +108,11 @@
             #hero img{
                 max-width: 80%;
             }
+            @media (max-width: 200px){
+                #hero .heroButton{
+                    display: none;
+                }
+            }
         }
     </style>
 </head>
@@ -131,10 +136,10 @@
                         I'm not crafting user experiences, you'll find me immersed in videogames. 
                         Take a look around–I hope you enjoy what I've created!
                     </p> -->
-                    <a class="px-5 py-2 rounded-1 mx-auto" href="#music" type="button" style="color: #BDB5E3;">
+                    <a class="px-5 py-2 rounded-1 mx-auto heroButton" href="#music" type="button" style="color: #BDB5E3;">
                         Learn about me
                     </a>
-                    <a class="btn px-5 py-2 rounded-1 mx-auto" href="#projects" type="button" style="color: #0d0d0d;">
+                    <a class="btn px-5 py-2 rounded-1 mx-auto heroButton" href="#projects" type="button" style="color: #0d0d0d;">
                         Straight to my projects
                     </a>
                 </div>
@@ -159,7 +164,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 my-5">
-                    <div class="box px-3">
+                    <div class="box">
                         <h5 style="color: #BDB5E3;">Music I listen to</h5>
                         <h3 class="text-light">A playlist for anything</h3>
                         <p class="text-secondary">
@@ -183,8 +188,8 @@
                         <img src="https://i.imgur.com/Q83JedE.png" class="img-fluid" alt="artBanner">
                     </div>
                 </div>
-                <div class="col-lg-6 my-5">
-                    <div class="box px-3">
+                <div class="col-lg-6 my-5 d-flex flex-column align-items-center">
+                    <div class="box">
                         <h5 style="color: #BDB5E3;">Personal pursuits</h5>
                         <h3 class="text-light">World beyond work</h3>
                         <p class="text-secondary">
@@ -281,7 +286,7 @@
             var cardContainer = document.getElementById("cardContainer");
             cardContainer.innerHTML += `
                 <div class="col-lg-3 col-md-6 my-4">
-                    <div class="card h-100 d-inline-block rounded-0 mx-auto">
+                    <div class="card h-100 rounded-0 mx-auto">
                         <div class="card-body d-flex flex-column justify-content-end my-3">
                             <img src="`+ cardIcon[j] +`" class="icon img-fluid" style="height: 48px; width: 48px;" alt="cardIcon">
                             <h5 class="card-title mt-3" style="color: #BDB5E3;">`+ cardCategory[j] +`</h5>

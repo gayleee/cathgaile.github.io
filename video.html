@@ -61,7 +61,7 @@
                         <img src="https://i.imgur.com/IHNYJy1.png" class="img-fluid" alt="videoBanner">
                     </div>
                 </div>
-                <div class="col-lg-6 my-5">
+                <div class="col-lg-6 my-5 d-flex flex-column align-items-center">
                     <div class="box">
                         <h5 style="color: #BDB5E3;">Video Highlights</h5>
                         <h3 class="text-light">Frames in Motion</h3>
@@ -70,7 +70,7 @@
                             fun of it. Feel free to explore and check out what I've shared here—it's not much, 
                             but it's both fun and genuine work!
                         </p>
-                        <a class="btn px-5 py-2 rounded-1" href="index.html" type="button" style="color: #0d0d0d;" id="aboutMe">
+                        <a class="btn px-5 py-2 rounded-1 mx-auto" href="index.html" type="button" style="color: #0d0d0d;" id="aboutMe">
                             Go back to home
                         </a>
                     </div>
@@ -112,7 +112,7 @@
         for(var i = 0; i < video.length; i++){
             var container = document.getElementById("videoContainer");
             container.innerHTML += `
-                <div class="col-lg-4 my-2">
+                <div class="col-lg-6 col-md-6 col-sm-12 my-2">
                     <div class="vidThumbnail ratio ratio-16x9 mx-auto my-3">
                         <iframe width="560" height="315" src="`+ video[i] +`" 
                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
